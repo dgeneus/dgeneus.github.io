@@ -1,0 +1,68 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, head {
+	margin:80px;
+	padding:30px;
+	height:100%;
+
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 2em;
+    line-height: 2.0em;
+
+}
+
+
+antic-slab-regular, body {
+		font-family: "Antic Slab", serif;
+		font-weight: 400;
+		font-style: normal;
+	background: #fffafa;
+	color: #5c5e5e
+}
+
+h1 {
+	font-family: "Antic Slab", serif;
+	font-weight: 100;
+	font-style: normal;
+	color: #ffffff;
+	text-shadow: 2px 2px 5px #636262;
+	letter-spacing: 8px;
+
+h2 {border: 1px solid rgb(214, 202, 204);
+	background: rgb(250, 249, 238);
+	width: 40%;
+	max-width: 20px;
+	margin:80px auto;
+	rotate: 10deg;}
+
+
+	div#container, {
+	border: 1px solid rgb(214, 202, 204);
+	background: rgb(250, 249, 238);
+	width: 40%;
+	max-width: 200px;
+	margin:80px auto;
+	rotate: 10deg;
+}
+
+ul {
+	list-style: none;
+	padding-left: 3px;
+}
+
+a {
+	color: rgb(251, 249, 230);
+}
+
+figure {
+	margin: 3px;
+
+
+#container {
+
+
+}
+
+
