@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Assignment 5</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<style>
+	div {
+		width: 300px;
+		height: 150px;
+		background-color: #94bc88;
+		animation-name: example;
+		animation-duration: 4s;
+	}
+
+	@keyframes example {
+		from {background-color: #94bc88;}
+		to {background-color: #9dd5ed;}
+	}
+	div {
+		width: 300px;
+		height: 150px;
+		position: relative;
+		background-color: #94bc88;
+		animation-name: example;
+		animation-duration: 4s;
+		animation-delay: 2s;
+	}
+	div {
+		width: 100px;
+		height: 100px;
+		background-color: #94bc88;
+		position: relative;
+		animation-name: example;
+		animation-duration: 4s;
+		animation-delay: 2s;
+	}
+
+	@keyframes example {
+		0%   {background-color: #94bc88; left:0px; top:0px;}
+		25%  {background-color: #9dd5ed; left:200px; top:0px;}
+		50%  {background-color: #f6efef; left:200px; top:200px;}
+		75%  {background-color: #dcfafa; left:0px; top:200px;}
+		100% {background-color: #94bc88; left:0px; top:0px;}
+	}
+	div {
+		width: 200px;
+		height: 200px;
+		position: relative;
+		background-color: #94bc88;
+		animation-name: example;
+		animation-duration: 4s;
+		animation-iteration-count: 3;
+	}
+	div {
+		width: 200px;
+		height: 200px;
+		background-color: #94bc88;
+		border: 1px solid #faf9ee;
+	}
+
+	div{
+		transform: rotate(-50deg);
+	}
+	div {
+		width: 100px;
+		height: 100px;
+		background: #94bc88;
+		transition: width 2s;
+	}
+
+	div:hover {
+		width: 100px;
+	}
+	#example1 {
+		border: 2px solid #636262;
+		padding: 10px;
+		border-radius: 60px;
+	}
+
+	#example2 {
+		border: 2px solid #636262;
+		padding: 10px;
+		border-radius: 60px;
+	}
+
+
+</style>
+</head>
+<body>
+
+<h1>CSS Animation</h1>
+
+<h2>Example 1</h2>
+<div id="example1">
+	<p>Circle Example 1</p>
+</div>
+
+<h2>Example 2</h2>
+<div id="example2">
+	<p>Circle Example 2</p>
+</div>
+
+</body>
+</html>
