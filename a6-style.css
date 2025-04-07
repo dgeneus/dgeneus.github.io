@@ -9,7 +9,7 @@ html, body {
 
 body {
   font-family: Andale Mono, monospace;
-  background-image: url("flower.jpg");
+  background-image: url('flower.jpg');
   background-color: rgb(209, 227, 214);
   background-size: cover;
   background-repeat: no-repeat;
