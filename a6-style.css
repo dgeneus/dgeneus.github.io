@@ -1,10 +1,8 @@
+/* Reset & Global Styles */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-}
-
-html {
   font-size: 1em;
   line-height: 1.4em;
 }
@@ -12,14 +10,17 @@ html {
 body {
   font-family: Andale Mono, monospace;
   background-image: url("flower.jpg");
-  background-color: rgb(209, 227, 214); /* Fallback */
+  background-color: rgb(209, 227, 214);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: rgb(145, 145, 145);
-  min-height: 100vh; /* Ensure full coverage */
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
+/* Main Content Container */
 #container {
   border: 1px solid rgb(145,179,154);
   background: rgb(209,227,214);
@@ -29,13 +30,31 @@ body {
   padding: 25px;
 }
 
-figure a {
-  color: seagreen;
+/* Responsive Grid System */
+.grid-container {
+  display: grid;
+  gap: 15px;
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
+.grid-item {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .grid-item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-item {
+    width: 33.33%;
+  }
+}
+
+/* Typography */
+figure a {
+  color: seagreen;
 }
 
 a {
@@ -52,41 +71,25 @@ header {
 
 footer {
   font-size: 0.8em;
+  text-align: center;
+  padding: 20px;
 }
 
 .blue-text {
   color: #2980b9;
 }
 
-/* 1. Mobile Styles (Default) */
-body {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
+/* Utility Classes */
 .container {
   width: 100%;
-  max-width: 1200px; /* Adjust as needed */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px; /* Side padding for small screens */
+  padding: 0 15px;
 }
 
-/* 2. Media Query for Tablets (768px+) */
 @media (min-width: 768px) {
   .container {
     padding: 0 30px;
-  }
-  
-  .grid-item {
-    width: 50%; /* Two-column layout */
-  }
-}
-
-/* 3. Media Query for Desktops (992px+) */
-@media (min-width: 992px) {
-  .grid-item {
-    width: 33.33%; /* Three-column layout */
   }
 }
 
