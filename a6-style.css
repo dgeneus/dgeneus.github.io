@@ -1,15 +1,23 @@
-/* Reset & Global Styles */
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit; 
+}
+
+html {
   font-size: 1em;
   line-height: 1.4em;
 }
 
 body {
   font-family: 'Courier New', Courier, monospace;
-  background-image: url('flower.jpg');
+  background-image: url("flower.jpg");
   background-color: rgb(209, 227, 214);
   background-size: cover;
   background-repeat: no-repeat;
@@ -18,9 +26,10 @@ body {
   min-height: 100vh;
   font-size: 16px;
   line-height: 1.5;
+  padding: 20px; 
 }
 
-/* Main Content Container */
+
 #container {
   border: 1px solid rgb(145,179,154);
   background: rgb(209,227,214);
@@ -28,58 +37,77 @@ body {
   max-width: 800px;
   margin: 20px auto;
   padding: 25px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+  border-radius: 8px; 
 }
 
-/* Responsive Grid System */
-.grid-container {
-  display: grid;
-  gap: 15px;
+figure {
+  margin: 1.5rem 0;
+  padding: 10px;
+  border: 1px solid #ecf0f1;
+  border-radius: 4px;
+  background: white;
 }
 
-.grid-item {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .grid-item {
-    width: 50%;
-  }
-}
-
-@media (min-width: 992px) {
-  .grid-item {
-    width: 33.33%;
-  }
-}
-
-/* Typography */
 figure a {
   color: seagreen;
+  padding: 2px 4px; 
+  border-radius: 2px;
 }
 
+/* Navagation */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+/* Links & Interactive */
 a {
   color: rgb(177, 205, 250);
+  text-decoration: none;
+  padding: 4px 2px;
+  transition: all 0.3s ease;
 }
 
 a:hover {
   color: rgb(133, 171, 148);
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
 }
+
 
 header {
   font-family: 'Courier New', Courier, monospace;
+  padding: 1.5rem 0;
+  border-bottom: 2px solid rgb(145,179,154);
+  margin-bottom: 2rem;
 }
 
 footer {
   font-size: 0.8em;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid #bdc3c7;
   text-align: center;
-  padding: 20px;
+  background: rgba(209,227,214,0.7);
+  border-radius: 4px;
 }
 
+/*Text Classes*/
 .blue-text {
   color: #2980b9;
+  padding: 4px;
+  border-left: 3px solid #2980b9;
+  margin: 1rem 0;
 }
 
-/* Utility Classes */
+/* Responsive Grid */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -87,9 +115,45 @@ footer {
   padding: 0 15px;
 }
 
+.grid-item {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ecf0f1;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
 @media (min-width: 768px) {
-  .container {
-    padding: 0 30px;
+  .grid-item {
+    width: 48%;
+    margin: 1%;
+    float: left; /* Consider using flexbox instead */
   }
+}
+
+@media (min-width: 992px) {
+  .grid-item {
+    width: 31.33%;
+    margin: 1%;
+  }
+}
+
+.padded {
+  padding: 1.5rem;
+}
+
+.margined {
+  margin: 1.5rem;
+}
+
+.bordered {
+  border: 2px solid #bdc3c7;
+  border-radius: 4px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
