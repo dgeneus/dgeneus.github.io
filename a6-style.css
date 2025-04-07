@@ -1,0 +1,69 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+	/* Standard text-settings below */
+	font-size: 1em;
+	line-height: 1.4em;
+}
+
+
+
+body {
+	font-family: Andale Mono;
+	background: rgb(209, 227, 214);
+	color: rgb (145)
+}
+#container {
+	border: 1px solid rgb(145,179,154);
+	background: rgb(209,227,214);
+	width: 90%;                            /* You can change this number */
+	max-width: 800px;                 /* You can change this number */
+	margin: auto;
+}
+
+figure a{
+	color:seagreen;
+}
+
+#container {
+	margin:auto;
+	margin-top:20px;
+	width:800px;
+	border:1px #808080;
+	padding: 25px;
+}
+ul {
+	list-style: none;
+	padding-left: 0px;
+}
+
+a {
+	color: rgb(177, 205, 250);
+}
+
+a:hover {
+	color: rgb(133, 171, 148);
+}
+
+header {
+	font-family: Andale Mono;
+}
+
+
+footer {
+	font-size:0.8em;
+}
+
+body {
+	background-image: url("img/flower.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+
