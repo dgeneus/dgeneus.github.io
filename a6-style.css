@@ -1,7 +1,7 @@
 
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: 4;
+  padding: 3;
   height: 100%;
   box-sizing: border-box;
 }
@@ -18,7 +18,6 @@ html {
 body {
   font-family: 'Courier New', Courier, monospace;
   background-image: url("flower.jpg");
-  background-color: rgb(209, 227, 214);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
