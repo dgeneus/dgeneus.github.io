@@ -8,7 +8,7 @@ html, body {
 }
 
 body {
-  font-family: Andale Mono, monospace;
+  font-family: 'Courier New', Courier, monospace;
   background-image: url('flower.jpg');
   background-color: rgb(209, 227, 214);
   background-size: cover;
@@ -66,7 +66,7 @@ a:hover {
 }
 
 header {
-  font-family: Andale Mono, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 footer {
