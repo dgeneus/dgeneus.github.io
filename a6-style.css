@@ -59,11 +59,13 @@ footer {
 	font-size:0.8em;
 }
 
-body {
+background {
 	background-image: url("files/flower.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 }
 
-
+p1 {
+  color: #2980b9; /* Belize hole blue */
+}
