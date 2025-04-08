@@ -1,63 +1,122 @@
-/* Basic CSS resets -- leveling slight inconsistencies in browsers */
 html, body {
-	margin:0px;
-	padding:0px;
-	height:100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box; 
+}
+
+*, *::before, *::after {
+  box-sizing: inherit; 
 }
 
 html {
-		/* Standard text-settings below */
-	font-size: 1em;
-    line-height: 1.4em;
+  font-size: 1em;
+  line-height: 1.4em;
 }
-
-
-
 
 body {
-	font-family: "Andale Mono", AndaleMono, monospace;
-	background: #cee7f5;
-	color: #5c5c5c
+  font-family: "Andale Mono", AndaleMono, monospace;
+  background: #cee7f5;
+  color: #5c5c5c;
+  min-height: 100vh;
+  padding: 20px; 
 }
 
-
 div#container {
-	border: 1px solid rgb(188,211,247);
-	background: rgb(223,242,223);
-	width: 90%;
-	max-width: 800px;
-	margin: auto;
+  border: 1px solid rgb(188,211,247);
+  background: rgb(223,242,223);
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto; 
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
 ul {
-	list-style: none;
-	padding-left: 0px;
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(188,211,247,0.3);
 }
 
 a {
-	color: rgb(116,130,116);
-}
-
-figure {
-	margin: 1px;
+  color: rgb(116,130,116);
+  text-decoration: none;
+  padding: 4px 2px; /
+  transition: all 0.3s ease;
 }
 
 a:hover {
-	color: rgb(209,223,227);
+  color: rgb(209,223,227);
+  background: rgba(255,255,255,0.2); 
+  border-radius: 2px;
+}
+
+figure {
+  margin: 1.5rem 0;
+  padding: 10px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 4px;
 }
 
 figure img {
-	width: 90%;
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
 }
 
-figcaption, footer {
-	font-size: 0.75em;
+figcaption {
+  font-size: 0.75em;
+  padding: 8px 0;
+  text-align: center;
+  color: #7a7a7a;
 }
 
 header {
-	font-family: Arial;
+  font-family: Arial, sans-serif;
+  padding: 1.5rem 0;
+  border-bottom: 2px solid rgba(188,211,247,0.5);
+  margin-bottom: 1.5rem;
 }
 
 footer {
-	font-size:0.8em;
+  font-size: 0.8em;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(188,211,247,0.5);
+  text-align: center;
+  color: #7a7a7a;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  div#container {
+    margin: 1rem auto;
+    padding: 15px;
+  }
+
+  figure img {
+    width: 100%;
+  }
+}
+
+.padded {
+  padding: 1.5rem;
+}
+
+.margined {
+  margin: 1.5rem;
+}
+
+.rounded {
+  border-radius: 4px;
 }
