@@ -1,41 +1,35 @@
+/* Core Reset */
 html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 *, *::before, *::after {
-	box-sizing: inherit;
+    box-sizing: inherit;
 }
 
+/* Typography */
 html {
-	font-size: 1em;
-	line-height: 1.4em;
+    font-size: 1em;
+    line-height: 1.4em;
 }
 
 body {
-	font-family: "Andale Mono", AndaleMono, monospace;
-	background: #cee7f5;
-	color: #5c5c5c;
-	min-height: 100vh;
-	padding: 20px;
-	text-align: center;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    background: #cee7f5;
+    color: #5c5c5c;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
 }
 
+/* Flexbox Container */
 div#container {
-	border: 1px solid rgb(162, 175, 162);
-	background: rgb(223,242,223);
-	width: 90%;
-	max-width: 800px;
-	margin: 2rem auto;
-	padding: 25px;
-	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-	border-radius: 8px;
-	text-align: center;
-}
+    border: 1px solid rgb(162, 175, 162);
+    background: rgb(223,242,223);
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem a
 
-ul {
-	list-style: none;
-	padding-left: 0;
-	margin:
