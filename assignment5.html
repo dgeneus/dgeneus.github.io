@@ -1,110 +1,276 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Advanced CSS Shape Animations</title>
+	<style>
+		
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
 
-	<title>Assignment 5</title>
+		body {
+			font-family: 'Segoe UI', system-ui;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 2rem;
+			background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+			overflow-x: hidden;
+		}
 
-	<link rel="stylesheet" href="style.css">
-</head>
-<style>
-	div {
-		width: 300px;
-		height: 150px;
-		background-color: #94bc88;
-		animation-name: example;
-		animation-duration: 4s;
-	}
+		h1 {
+			color: #2c3e50;
+			margin-bottom: 2rem;
+			text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			font-size: 2.5rem;
+		}
 
-	@keyframes example {
-		from {background-color: #94bc88;}
-		to {background-color: #9dd5ed;}
-	}
-	div {
-		width: 300px;
-		height: 150px;
-		position: relative;
-		background-color: #94bc88;
-		animation-name: example;
-		animation-duration: 4s;
-		animation-delay: 2s;
-	}
-	div {
-		width: 100px;
-		height: 100px;
-		background-color: #94bc88;
-		position: relative;
-		animation-name: example;
-		animation-duration: 4s;
-		animation-delay: 2s;
-	}
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 2rem;
+			width: 90%;
+			max-width: 1400px;
+			padding: 2rem;
+			background: rgba(255,255,255,0.9);
+			border-radius: 20px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+		}
 
-	@keyframes example {
-		0%   {background-color: #94bc88; left:0px; top:0px;}
-		25%  {background-color: #9dd5ed; left:200px; top:0px;}
-		50%  {background-color: #f6efef; left:200px; top:200px;}
-		75%  {background-color: #dcfafa; left:0px; top:200px;}
-		100% {background-color: #94bc88; left:0px; top:0px;}
-	}
-	div {
-		width: 200px;
-		height: 200px;
-		position: relative;
-		background-color: #94bc88;
-		animation-name: example;
-		animation-duration: 4s;
-		animation-iteration-count: 3;
-	}
-	div {
-		width: 200px;
-		height: 200px;
-		background-color: #94bc88;
-		border: 1px solid #faf9ee;
-	}
+		
+		.shape {
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			font-weight: bold;
+			text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+			will-change: transform, opacity;
+			position: relative;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
 
-	div{
-		transform: rotate(-50deg);
-	}
-	div {
-		width: 100px;
-		height: 100px;
-		background: #94bc88;
-		transition: width 2s;
-	}
+		
+		@keyframes morph {
+			0% { border-radius: 0; background: #94bc88; transform: rotate(0deg); }
+			25% { border-radius: 50% 20% 50% 20%; background: #9dd5ed; }
+			50% { border-radius: 20% 50% 20% 50%; background: #f6efef; transform: rotate(180deg); }
+			75% { border-radius: 50% 50% 20% 20%; background: #dcfafa; }
+			100% { border-radius: 0; background: #94bc88; transform: rotate(360deg); }
+		}
 
-	div:hover {
-		width: 100px;
-	}
-	#example1 {
-		border: 2px solid #636262;
-		padding: 10px;
-		border-radius: 60px;
-	}
+		@keyframes float {
+			0%, 100% { transform: translateY(0) rotate(0deg); }
+			50% { transform: translateY(-30px) rotate(10deg); }
+		}
 
-	#example2 {
-		border: 2px solid #636262;
-		padding: 10px;
-		border-radius: 60px;
-	}
+		@keyframes pulse {
+			0% { transform: scale(1); }
+			50% { transform: scale(1.1); }
+			100% { transform: scale(1); }
+		}
 
+		@keyframes spin {
+			100% { transform: rotate(360deg); }
+		}
 
-</style>
+		@keyframes wave {
+			0% { transform: skewY(0deg); }
+			50% { transform: skewY(20deg); }
+			100% { transform: skewY(0deg); }
+		}
+
+		@keyframes color-cycle {
+			0% { background-color: #94bc88; }
+			25% { background-color: #9dd5ed; }
+			50% { background-color: #f6efef; }
+			75% { background-color: #dcfafa; }
+			100% { background-color: #94bc88; }
+		}
+
+		@keyframes neon-glow {
+			0% { box-shadow: 0 0 10px #94bc88; }
+			50% { box-shadow: 0 0 30px #9dd5ed; }
+			100% { box-shadow: 0 0 10px #94bc88; }
+		}
+
+		@keyframes path-move {
+			0% { transform: translate(0,0); }
+			25% { transform: translate(100px,-50px); }
+			50% { transform: translate(0,100px); }
+			75% { transform: translate(-100px,50px); }
+			100% { transform: translate(0,0); }
+		}
+
+		
+		#morphing-square {
+			background: linear-gradient(135deg, #94bc88, #9dd5ed);
+			animation: morph 8s ease-in-out infinite;
+		}
+
+		#floating-circle {
+			border-radius: 50%;
+			background: radial-gradient(circle, #9dd5ed, #94bc88);
+			animation: float 3s ease-in-out infinite;
+		}
+
+		#pulsing-triangle {
+			width: 0;
+			height: 0;
+			border-left: 100px solid transparent;
+			border-right: 100px solid transparent;
+			border-bottom: 173px solid #f6efef;
+			animation: pulse 2s ease-in-out infinite;
+		}
+
+		#spinning-diamond {
+			background: #dcfafa;
+			transform: rotate(45deg);
+			animation: spin 4s linear infinite;
+		}
+
+		#spinning-diamond > p {
+			transform: rotate(-45deg);
+		}
+
+		#wave-rectangle {
+			background: linear-gradient(45deg, #94bc88, #9dd5ed);
+			animation: wave 2.5s ease-in-out infinite;
+		}
+
+		#color-cycler {
+			background: conic-gradient(#94bc88, #9dd5ed, #f6efef, #dcfafa, #94bc88);
+			border-radius: 20%;
+			animation: spin 6s linear infinite, pulse 3s ease-in-out infinite;
+		}
+
+		#hover-grow {
+			background: #9dd5ed;
+			transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+		}
+
+		#hover-grow:hover {
+			transform: scale(1.2) rotate(10deg);
+			background: #94bc88;
+		}
+
+		#neon-circle {
+			border-radius: 50%;
+			background: #94bc88;
+			animation: neon-glow 2s ease-in-out infinite;
+		}
+
+		#moving-path {
+			background: linear-gradient(45deg, #9dd5ed, #dcfafa);
+			animation: path-move 8s linear infinite;
+		}
+
+		#color-cycle {
+			animation: color-cycle 5s linear infinite;
+		}
+
+		#rotating-text {
+			background: transparent;
+			color: #2c3e50;
+			font-size: 1.2rem;
+			animation: spin 8s linear infinite;
+		}
+
+		#rotating-text p {
+			animation: spin 8s linear infinite reverse;
+		}
+
+		#complex-shape {
+			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+			background: conic-gradient(from 45deg, #94bc88, #9dd5ed, #f6efef);
+			animation: spin 5s linear infinite;
+		}
+
+		#gradient-morph {
+			background: linear-gradient(135deg, #94bc88, #9dd5ed);
+			animation: morph 6s ease-in-out infinite, color-cycle 8s linear infinite;
+		}
+
+		
+		.shape:hover {
+			transform: scale(1.05) translateZ(0);
+			z-index: 2;
+		}
+
+		
+		@media (max-width: 768px) {
+			.grid {
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: 1.5rem;
+			}
+
+			.shape {
+				width: 150px;
+				height: 150px;
+			}
+
+			#pulsing-triangle {
+				border-left: 75px solid transparent;
+				border-right: 75px solid transparent;
+				border-bottom: 130px solid #f6efef;
+			}
+
+			#rotating-text {
+				font-size: 1rem;
+			}
+		}
+
+		
+		.shape::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: inherit;
+			opacity: 0;
+			background: rgba(255,255,255,0.2);
+			transition: opacity 0.3s ease;
+		}
+
+		.shape:hover::after {
+			opacity: 1;
+		}
+
+		#complex-shape {
+			filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+		}
+	</style>
 </head>
 <body>
+<h1>Interactive CSS Animation Playground</h1>
 
-<h1>CSS Animation</h1>
+<div class="grid">
+	
+	<div class="shape" id="morphing-square"><p>Morph</p></div>
+	<div class="shape" id="floating-circle"><p>Float</p></div>
+	<div class="shape" id="pulsing-triangle"><p>△</p></div>
+	<div class="shape" id="spinning-diamond"><p>Spin</p></div>
+	<div class="shape" id="wave-rectangle"><p>Wave</p></div>
+	<div class="shape" id="color-cycler"><p>Colors</p></div>
+	<div class="shape" id="hover-grow"><p>Hover Me</p></div>
 
-<h2>Example 1</h2>
-<div id="example1">
-	<p>Circle Example 1</p>
+	
+	<div class="shape" id="neon-circle"><p>Glow</p></div>
+	<div class="shape" id="moving-path"><p>Path</p></div>
+	<div class="shape" id="color-cycle"><p>Cycle</p></div>
+	<div class="shape" id="rotating-text"><p>CSS Magic</p></div>
+	<div class="shape" id="complex-shape"><p>Clip</p></div>
+	<div class="shape" id="gradient-morph"><p>Gradient</p></div>
 </div>
-
-<h2>Example 2</h2>
-<div id="example2">
-	<p>Circle Example 2</p>
-</div>
-
 </body>
 </html>
