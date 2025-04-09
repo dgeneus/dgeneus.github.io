@@ -1,4 +1,3 @@
-/* Core Reset */
 html, body {
     margin: 0;
     padding: 0;
@@ -10,7 +9,6 @@ html, body {
     box-sizing: inherit;
 }
 
-/* Typography */
 html {
     font-size: 1em;
     line-height: 1.4em;
@@ -31,5 +29,185 @@ div#container {
     background: rgb(223,242,223);
     width: 90%;
     max-width: 800px;
-    margin: 2rem a
+    margin: 2rem auto;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+}
 
+header {
+    font-family: Arial, sans-serif;
+    padding: 1.5rem 0;
+    border-bottom: 2px solid rgb(162, 175, 162);
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.text-columns {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+p {
+    margin: 0 0 1.5rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.section-1, .section-2 {
+    flex: 1;
+    padding: 1rem;
+    background: rgba(255,255,255,0.3);
+    border-radius: 4px;
+}
+
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+li {
+    padding: 12px;
+    border-bottom: 3px solid rgb(152, 197, 146);
+    display: flex;
+    align-items: center;
+}
+
+
+footer {
+    font-size: 0.8em;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(188,211,247,0.5);
+    text-align: center;
+    color: #7a7a7a;
+    flex-shrink: 0;
+}
+
+
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 1.5rem 0;
+}
+
+figure.responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Utility Classes */
+.padded {
+    padding: 1.5rem;
+}
+
+.margined {
+    margin: 1.5rem;
+}
+
+.rounded {
+    border-radius: 4px;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    div#container {
+        margin: 1rem auto;
+        padding: 15px;
+        width: 95%;
+    }
+
+    .text-columns {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    figure img {
+        width: 100%;
+    }
+
+    ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    li {
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    main {
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .text-columns {
+        flex: 2;
+    }
+    
+    figure.responsive {
+        flex: 1;
+        min-width: 300px;
+    }
+}
+
+
+a:focus {
+    outline: 2px solid #5c5c5c;
+}
+
+
+a {
+    color: rgb(116,130,116);
+    text-decoration: none;
+    padding: 4px 2px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: rgb(209,223,227);
+    background: rgba(255,255,255,0.2);
+    border-radius: 2px;
+}
