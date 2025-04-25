@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Philosophical Reflection</title>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
+	<style>
+		/* Base Styles */
+		:root {
+			--primary: #2c3e50;
+			--secondary: #c8c8c8;
+			--accent: #8e8a8a;
+			--light: #a1bdbd;
+			--dark: #2c3e50;
+			--transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		}
+
+		body {
+			font-family: 'Montserrat', sans-serif;
+			line-height: 1.8;
+			margin: 0;
+			padding: 0;
+			background: linear-gradient(135deg, #f8f9fa 0%, #ecf0f1 100%);
+			min-height: 100vh;
+			transition: background 0.6s ease;
+		}
+
+		.omar {
+			background: linear-gradient(135deg, #e8edf1 0%, #dfe6e9 100%) !important;
+		}
+
+		#container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 2rem;
+		}
+
+		header {
+			text-align: center;
+			padding: 3rem 0;
+			position: relative;
+			margin-bottom: 2rem;
+		}
+
+		header::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 25%;
+			width: 50%;
+			height: 3px;
+			background: linear-gradient(to right, transparent, var(--accent), transparent);
+		}
+
+		h1 {
+			font-family: 'Playfair Display', serif;
+			color: var(--primary);
+			font-size: 2.5rem;
+			margin-bottom: 0.5rem;
+			text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+		}
+
+		h2 {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 300;
+			color: var(--primary);
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			cursor: pointer;
+			transition: var(--transition);
+		}
+
+		h2:hover {
+			color: var(--accent);
+		}
+
+		/* Interactive Elements */
+		.button-group {
+			display: flex;
+			gap: 1rem;
+			justify-content: center;
+			margin: 2rem 0;
+		}
+
+		button {
+			padding: 1em 2.5em;
+			border: none;
+			border-radius: 50px;
+			background: var(--accent);
+			color: white;
+			font-weight: 500;
+			cursor: pointer;
+			transition: var(--transition);
+			position: relative;
+			overflow: hidden;
+			box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+		}
+
+		button::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+			transition: 0.6s;
+		}
+
+		button:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+		}
+
+		button:hover::before {
+			left: 100%;
+		}
+
+		/* Content Sections */
+		main {
+			display: grid;
+			gap: 2rem;
+		}
+
+		p {
+			padding: 2rem;
+			border-radius: 12px;
+			background: rgb(217, 225, 225);
+			box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+			opacity: 0;
+			transform: translateY(20px);
+			transition: var(--transition);
+			backdrop-filter: blur(5px);
+			border: 1px solid rgba(255,255,255,0.3);
+		}
+
+		p.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		#minnie {
+			font-family: 'Playfair Display', serif;
+			font-style: italic;
+			font-size: 1.5rem;
+			text-align: center;
+			color: var(--primary);
+			position: relative;
+			padding: 2rem;
+		}
+
+		#minnie::before,
+		#minnie::after {
+			content: '"';
+			font-size: 3rem;
+			color: var(--accent);
+			position: absolute;
+			opacity: 0.3;
+		}
+
+		#minnie::before {
+			top: 0;
+			left: 10px;
+		}
+
+		#minnie::after {
+			bottom: 0;
+			right: 10px;
+		}
+
+		/* Responsive Design */
+		@media (max-width: 768px) {
+			#container {
+				padding: 1.5rem;
+			}
+
+			.button-group {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			h1 {
+				font-size: 2rem;
+			}
+
+			p {
+				padding: 1.5rem;
+			}
+		}
+
+		/* Animation Classes */
+		.highlight {
+			color: var(--accent) !important;
+			text-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+		}
+	</style>
+</head>
+
+<body>
+<div id="container">
+	<header>
+		<h1>Philosophical Reflection</h1>
+		<h2>Interactive Exploration</h2>
+	</header>
+
+	<main>
+		<div class="button-group">
+			<button id="magic" aria-label="Quote"> Reveal Wisdom</button>
+			<button id="whatever" aria-label="Reflection"> Personal Reflection</button>
+		</div>
+
+		<p id="minnie">"A soft spirit in a hard world" - Butterflies Rising</p>
+		<p id="lola">This quote has resonated with me personally, as someone navigating a world that often values harshness over kindness. It represents the aspiration to maintain compassion despite societal pressures and personal experiences with unkindness.</p>
+	</main>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		// Initial setup
+		$('p').hide().removeClass('visible');
+
+		// Quote revelation with enhanced animation
+		$('#magic').on('click', function() {
+			$('#minnie').stop(true).slideDown(800, function() {
+				$(this).addClass('visible');
+				$(this).css({
+					'background': 'rgba(255,255,255,0.95)',
+					'box-shadow': '0 10px 25px rgba(0,0,0,0.1)'
+				});
+			});
+
+			$(this).css('background', 'var(--secondary)');
+		});
+
+		// Reflection toggle with improved feedback
+		$('#whatever').on('click', function() {
+			$('#lola').stop(true).fadeToggle(1000, function() {
+				$(this).toggleClass('visible');
+				if($(this).is(':visible')) {
+					$(this).css('transform', 'translateY(0) scale(1.02)');
+					setTimeout(() => {
+						$(this).css('transform', 'translateY(0) scale(1)');
+					}, 300);
+				}
+			});
+
+			$(this).css('background', $('#lola').is(':visible') ? 'var(--secondary)' : 'var(--accent)');
+		});
+
+		// Theme toggle with smooth transition
+		$('h2').on('click', function() {
+			$('body').toggleClass('omar');
+			$(this).toggleClass('highlight');
+		});
+
+		// Enhanced hover effects
+		$('button').hover(
+				function() {
+					$(this).css('transform', 'translateY(-5px) scale(1.05)');
+				},
+				function() {
+					$(this).css('transform', 'translateY(0) scale(1)');
+				}
+		);
+	});
+</script>
+</body>
+</html>
