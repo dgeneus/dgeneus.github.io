@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>About - N4SlAB</title>
+ <!-- Google Fonts -->
+ <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet" />
+ <link href="https://fonts.googleapis.com/css?family=Readex+Pro&display=swap" rel="stylesheet" />
+
+ <style>
+  * { box-sizing: border-box; }
+  body, h1, h2, h3, h4, h5, h6, p, ul, li { margin: 0; padding: 0; }
+  body {
+   font-size: 16px;
+   font-family: 'IBM Plex Mono', monospace, Arial, sans-serif;
+   background-color: #5c5e5e;
+   color: #fff;
+   min-height: 100vh;
+  }
+  .background-layer {
+   position: relative;
+   min-height: 100vh;
+   width: 100%;
+   overflow: hidden;
+  }
+  .overlay {
+   position: absolute;
+   top: 0; left: 0; width: 100%; height: 100%;
+   background: rgb(92, 94, 94);
+   opacity: 0.92;
+   z-index: 0;
+  }
+
+  header {
+   font-family: 'Readex Pro', sans-serif;
+   position: relative;
+   z-index: 2;
+   text-align: center;
+   margin-top: 3rem;
+  }
+  .page-title {
+   color: #d9e1e1;
+   font-size: 2.5rem;
+   letter-spacing: 0.02em;
+   margin-bottom: 2rem;
+   font-family: 'Readex Pro', sans-serif;
+  }
+  .description {
+   position: relative;
+   z-index: 2;
+   width: 80%;
+   max-width: 700px;
+   margin: 0 auto;
+   background: rgba(92, 94, 94, 0.95);
+   color: #fff;
+   padding: 2rem 1.5rem;
+   border-radius: 1rem;
+   box-shadow: 0 2px 12px rgba(46,77,54,0.07);
+   text-align: center;
+   margin-bottom: 2.5rem;
+  }
+  .steps {
+   position: relative;
+   z-index: 2;
+   width: 80%;
+   max-width: 700px;
+   margin: 0 auto 2rem auto;
+   text-align: center;
+  }
+  .step-title {
+   color: #a2afa2;
+   font-size: 1.4rem;
+   margin-top: 2rem;
+   margin-bottom: 0.5rem;
+   font-family: 'Readex Pro', sans-serif;
+  }
+  .step-description {
+   color: #d9e1e1;
+   margin-bottom: 1.5rem;
+   font-size: 1.1rem;
+  }
+  .step-image {
+   display: block;
+   margin: 1rem auto;
+   max-width: 320px;
+   width: 100%;
+   border-radius: 0.7rem;
+   box-shadow: 0 2px 8px rgba(46,77,54,0.09);
+   background: #e5ece9;
+  }
+  .ai-generated, .photo-credit {
+   display: block;
+   color: #bbb;
+   font-size: 0.95em;
+   margin-top: 0.7em;
+   font-style: italic;
+  }
+  .menu-label {
+   position: fixed;
+   top: 2rem;
+   right: 2rem;
+   background: #789184;
+   color: #fff;
+   padding: 0.5em 1.2em;
+   border-radius: 0.7em;
+   font-size: 1.1em;
+   z-index: 10;
+   box-shadow: 0 2px 8px rgba(46,77,54,0.09);
+  }
+ </style>
+</head>
+<body>
+<div class="background-layer">
+ <div class="overlay"></div>
+ <div class="decorative-bar"></div>
+
+ <!-- Main Heading -->
+ <header>
+  <h1 class="page-title">What Is It?</h1>
+ </header>
+
+ <!-- Description -->
+ <section>
+  <p class="description">
+   Our material is a modern prototype, offering a sustainable alternative for construction. Its flexible nature allows for versatile applications, making it suitable for both intricate and straightforward projects.<br><br>
+   Unlike conventional sustainable materials, our product enables unique structural possibilities that are typically unattainable. While the wooden components provide a flexible framework, the elasticity achieved in our slabs cannot be replicated with plywood alone.<br><br>
+   Our process incorporates Steam Bending, Water-Based Thermo Treatment, Enzyme Softening, and Recycled Ferrite Magnets (Iron Oxide) for magnetic applications.
+  </p>
+ </section>
+
+ <!-- Steps Section -->
+ <section class="steps">
+  <h2 class="step-title">Step 1</h2>
+  <p class="step-description">Rectangular slab crafted from natural ingredients, featuring smooth, rounded edges and a matte finish.</p>
+  <img src="images/model.png" alt="Flexible slab model" class="step-image">
+  <span class="ai-generated">AI Generated</span>
+
+  <h3 class="step-title">Step 2</h3>
+  <p class="step-description">The flexibility and wooden structure are enhanced by natural resources.</p>
+  <img src="images/v68_91.png" alt="Step 2 illustration" class="step-image">
+  <span class="photo-credit">Photo By Brian Boggs</span>
+
+  <h4 class="step-title">Step 3</h4>
+  <p class="step-description">Magnetic properties allow structures to be held in place without additional fasteners, simplifying construction and improving durability.</p>
+  <span class="photo-credit">Photo By Sabastian van Damme</span>
+  <img src="images/v68_98.png" alt="Step 3 illustration" class="step-image">
+ </section>
+
+ <!-- Menu Label -->
+ <span class="menu-label">Menu</span>
+</div>
+</body>
+</html>
