@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>N4Slab – Thank You</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet" />
+
+</head>
+<style>* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', monospace, Arial, sans-serif;
+    background: #a7b59b;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.thankyou-bg {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    background: url("../images/v68_137.png") center center/cover no-repeat;
+    overflow: hidden;
+}
+
+.thankyou-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(167,181,155,0.95);
+    z-index: 1;
+}
+
+.thankyou-content {
+    position: relative;
+    z-index: 4;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    text-align: center;
+    background: rgb(65, 83, 59);
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 12px rgba(46,77,54,0.07);
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.thankyou-nav {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.thankyou-title {
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 1.5rem;
+    color: #a2afa2;
+    margin-bottom: 0.7rem;
+    margin-top: 0;
+}
+
+.thankyou-message {
+    font-size: 1.1rem;
+    color: #a7a8a8;
+    margin-bottom: 2.2rem;
+}
+
+.thankyou-info {
+    margin-top: 2rem;
+}
+.brand-title {
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 1.15rem;
+    color: #748a6c;
+    margin-bottom: 0.7rem;
+}
+.brand-desc {
+    font-size: 1rem;
+    color: #d9e1e1;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .thankyou-content {
+        max-width: 95vw;
+        padding: 2rem 0.5rem 1.5rem 0.5rem;
+        margin-top: 1.5rem;
+    }
+}
+.logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 2px 8px rgba(46,77,54,0.09);
+    display: block;
+}
+
+.thankyou-graphic {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 2px 8px rgba(46,77,54,0.09);
+}
+
+@media (max-width: 700px) {
+    .logo-img {
+        width: 60px;
+        height: 60px;
+    }
+    .thankyou-graphic {
+        width: 70px;
+        height: 70px;
+        margin: 1rem auto;
+    }
+}</style>
+<body>
+<div class="thankyou-bg">
+    <div class="thankyou-overlay"></div>
+    <main class="thankyou-content">
+        <img src="images/v68_144.png" alt="N4Slab Logo" class="logo-img" />
+        <nav class="thankyou-nav">
+        </nav>
+        <h1 class="thankyou-title">Thank you for your purchase and contribution!</h1>
+        <img src="images/v68_145.png" alt="Celebratory Icon" class="thankyou-graphic" />
+        <p class="thankyou-message">We hope you enjoy your new slab model!</p>
+        <section class="thankyou-info">
+            <h2 class="brand-title">N4Slab, for a better built environment.</h2>
+            <p class="brand-desc">
+                By prioritizing sustainable practices, simple installation, and re-usability, our products contribute to carbon sequestration, reduce construction-related pollution, and offer economic benefits by minimizing mass production and material waste.
+            </p>
+        </section>
+    </main>
+</div>
+</body>
+</html>
