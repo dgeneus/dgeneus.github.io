@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Wood Science & Materials - N4SlAB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 16px;
+            font-family: 'IBM Plex Mono', monospace, Arial, sans-serif;
+            background: #e8f0f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .materials-page {
+            min-height: 100vh;
+            position: relative;
+            padding-bottom: 2rem;
+            background: #7e837e;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            z-index: 0;
+            background: url("../images/v68_101.png") center center/cover no-repeat;
+            opacity: 0.18;
+            pointer-events: none;
+        }
+
+        header {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem 0 1rem 0;
+        }
+
+        .main-title {
+            font-size: 2.2rem;
+            color: #4b5f4f;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.04em;
+        }
+
+        .main-menu ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+        }
+        .menu-link {
+            text-decoration: none;
+            color: #789184;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+        .menu-link:hover {
+            color: #3a4d39;
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            padding: 1rem 1.5rem 2rem 1.5rem;
+        }
+
+        .material-card {
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px rgba(46,77,54,0.07);
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .material-image {
+            width: 100%;
+            max-width: 270px;
+            height: auto;
+            border-radius: 0.7rem;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 2px 8px rgba(46,77,54,0.09);
+            background: #e5ece9;
+        }
+
+        .material-card h2 {
+            color: #789184;
+            font-size: 1.4rem;
+            margin-bottom: 0.7rem;
+            margin-top: 0;
+        }
+
+        .material-card p {
+            color: #555;
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
+        .source {
+            display: block;
+            color: #aaa;
+            font-size: 0.95em;
+            margin-top: 0.7em;
+            font-style: italic;
+        }    </style>
+</head>
+<body>
+<div class="materials-page">
+
+    <!-- Decorative background image -->
+    <div class="background-image"></div>
+
+    <header>
+        <h1 class="main-title">Wood Science & Materials</h1>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="#" class="menu-link">Menu</a></li>
+                <li><a href="#" class="menu-link">Our Shop</a></li>
+                <li><a href="#" class="menu-link">Research</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="materials-grid">
+        <section class="material-card">
+            <img src="../images/v69_185.png" alt="Plywood panel" class="material-image">
+            <h2>Plywood</h2>
+            <p>
+                Plywood is typically produced from fast-growing, sustainable wood species, and its efficient use of wood resources makes it an environmentally favorable choice for many applications. The manufacturing process involves slicing logs into thin veneers, which are then bonded under heat and pressure to form panels of precise dimensions.
+                <br><span class="source">Source: Plywood as A Construction Material</span>
+            </p>
+        </section>
+        <section class="material-card">
+            <img src="../images/v68_105.png" alt="Hardwood sample" class="material-image">
+            <h2>Hardwood</h2>
+            <p>
+                We use hardwood (approx. 1,700 lbf, 7,560 N hardness), which is naturally decay-resistant and more durable than other construction woods. Our hardwood is sourced from sustainable cultivators in the Appalachian region and the Midwest.
+                <br><span class="source">Source: The Rise of Black Locust Lumber</span>
+            </p>
+        </section>
+        <section class="material-card">
+            <img src="../images/v69_184.png" alt="Wood science diagram" class="material-image">
+            <h2>The Science</h2>
+            <p>
+                Wood is a natural composite material primarily composed of cellulose fibers (which provide strength) embedded in a matrix of lignin (which binds the fibers and provides rigidity). This unique structure gives wood a remarkable combination of strength, flexibility, and lightweight properties, making it ideal for construction.
+                <br><span class="source">Source: Wood Handbook, Wood as an Engineering Material</span>
+            </p>
+        </section>
+    </main>
+</div>
+</body>
+</html>
