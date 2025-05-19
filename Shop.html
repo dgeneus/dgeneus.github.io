@@ -1,193 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>N4SlAB Product Menu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Readex+Pro&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet" />
-
-    <style>* {
-        box-sizing: border-box;
-    }
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N4SlAB Shop – Buy Sustainable Slabs</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Readex+Pro&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
     body {
-        font-size: 16px;
-        font-family: 'IBM Plex Mono', monospace, Arial, sans-serif;
-        background: #ebedf0;
-        color: #333;
-        margin: 0;
-        padding: 0;
+      font-size: 16px;
+      font-family: 'IBM Plex Mono', monospace, Arial, sans-serif;
+      background: #f7f8f6;
+      color: #222;
+      margin: 0;
+      padding: 0;
     }
-
-    .product-menu-bg {
-        min-height: 100vh;
-        width: 100vw;
-        background: url("../images/v68_117.png") center center/cover no-repeat;
-        position: relative;
-        overflow: hidden;
-        padding-bottom: 2rem;
+    .shop-bg {
+      min-height: 100vh;
+      width: 100vw;
+      background: #e8ede5;
+      position: relative;
+      display: flex;
+      flex-direction: column;
     }
-
-    .menu-header {
-        text-align: center;
-        margin-top: 56px;
+    .main-header {
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem 1rem;
+      background: rgba(167,181,155,0.92);
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      box-shadow: 0 2px 12px rgba(46,77,54,0.08);
     }
-
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .nav-link {
+      color: #222;
+      text-decoration: none;
+      font-family: 'Readex Pro', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.3em 1em;
+      border-radius: 5px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-link:hover {
+      background: #748a6c;
+      color: #fff;
+    }
     .brand-title {
-        font-family: 'Readex Pro', sans-serif;
-        font-size: 2.25rem;
-        color: #222;
-        margin-bottom: 0.5rem;
+      font-family: 'Readex Pro', sans-serif;
+      font-size: 2.4rem;
+      letter-spacing: 0.04em;
+      color: #222;
+      margin-bottom: 0.5rem;
     }
-
     .brand-tagline {
-        font-family: 'IBM Plex Mono', monospace;
-        color: #748a6c;
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
+      font-family: 'IBM Plex Mono', monospace;
+      color: #748a6c;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
     }
-
-    .menu-nav {
-        position: absolute;
-        top: 29px;
-        left: 24px;
+    .shop-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem 2rem 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
     }
-
-    .menu-btn {
-        background: #748a6c;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 0.9rem;
-        padding: 0.4em 1.2em;
-        cursor: pointer;
-        font-family: 'IBM Plex Mono', monospace;
-        box-shadow: 0 2px 8px rgba(46,77,54,0.09);
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      margin: 2rem 0;
     }
-
-    .product-main {
-        max-width: 400px;
-        margin: 60px auto 0 auto;
-        background: rgba(255,255,255,0.97);
-        border-radius: 1rem;
-        box-shadow: 0 2px 12px rgba(46,77,54,0.07);
-        padding: 2rem 1.5rem;
-        text-align: center;
+    .product-card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 2px 12px rgba(46,77,54,0.07);
+      padding: 2rem 1.2rem 1.5rem 1.2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
     }
-
-    .options-title {
-        font-family: 'Readex Pro', sans-serif;
-        color: #222;
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
+    .product-card:hover {
+      box-shadow: 0 4px 24px rgba(46,77,54,0.14);
     }
-
-    .product-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .product-item {
-        margin-bottom: 2.2rem;
-    }
-
-    .product-name {
-        font-family: 'Readex Pro', sans-serif;
-        font-size: 1.1rem;
-        color: #222;
-        margin-bottom: 0.3rem;
-    }
-
     .product-image {
-        width: 120px;
-        height: auto;
-        display: block;
-        margin: 0.5rem auto 1rem auto;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 8px rgba(46,77,54,0.09);
-        background: #e5ece9;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 0.6rem;
+      margin-bottom: 1.1rem;
+      background: #e5ece9;
+      box-shadow: 0 2px 8px rgba(46,77,54,0.09);
     }
-
+    .product-name {
+      font-family: 'Readex Pro', sans-serif;
+      font-size: 1.2rem;
+      color: #222;
+      margin-bottom: 0.4rem;
+    }
     .product-price {
-        color: #999;
-        font-size: 1rem;
-        margin-bottom: 0.7rem;
+      color: #748a6c;
+      font-size: 1.07rem;
+      margin-bottom: 1.2rem;
     }
-
     .buy-btn {
-        background: #748a6c;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 0.95rem;
-        padding: 0.4em 1.2em;
-        cursor: pointer;
-        font-family: 'IBM Plex Mono', monospace;
-        margin-top: 0.5rem;
-        transition: background 0.2s;
+      display: inline-block;
+      background: #748a6c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Readex Pro', sans-serif;
+      font-size: 1rem;
+      padding: 0.7em 1.5em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
     }
     .buy-btn:hover {
-        background: #5c5e5e;
+      background: #222;
+      color: #a7b59b;
     }
-
-    .logo-image {
-        width: 100px;    /* Adjust this value as needed */
-        height: auto;    /* Maintains aspect ratio */
-        display: block;
-        margin: 0 auto 1rem auto;  /* Optional: centers the logo with some bottom margin */
+    .main-footer {
+      text-align: center;
+      padding: 1.5rem 0 1rem 0;
+      color: #bbb;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      background: transparent;
     }
-
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-        .product-main {
-            max-width: 98vw;
-            padding: 1.2rem 0.5rem;
-        }
-        .menu-header {
-            margin-top: 24px;
-        }
-    }</style>
-
+    @media (max-width: 700px) {
+      .main-header {
+        padding: 1.5rem 0.5rem 1rem 0.5rem;
+        border-radius: 0 0 1.2rem 1.2rem;
+      }
+      .brand-title {
+        font-size: 1.5rem;
+      }
+      .shop-content {
+        padding: 1.2rem 0.2rem;
+      }
+      .products-grid {
+        gap: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="product-menu-bg">
-
-    <header class="menu-header">
-        <img src="images/v68_126.png" alt="N4SlAB Logo" class="logo-image">
-        <h1 class="brand-title">N4SlAB</h1>
-        <p class="brand-tagline">A sustainably efficient model used for the built environment.</p>
-    </header>
-
-    <nav class="menu-nav">
-        <button class="menu-btn">Menu</button>
+<div class="shop-bg">
+  <header class="main-header">
+    <nav class="main-nav">
+      <a href="Research.html" class="nav-link">Research</a>
+      <a href="Contributors.html" class="nav-link">Contributors</a>
+      <a href="Shop.html" class="nav-link">Shop</a>
+      <a href="about.html" class="nav-link">About</a>
     </nav>
+    <h1 class="brand-title">N4SlAB</h1>
+    <p class="brand-tagline">Sustainable Materials for a Better Built Environment</p>
+  </header>
 
-    <main class="product-main">
-        <h2 class="options-title">Pick any of our options:</h2>
-        <ul class="product-list">
-            <li class="product-item">
-                <h3 class="product-name">Honey</h3>
-                <img src="images/v68_121.png" alt="Honey slab" class="product-image">
-                <p class="product-price">$15 per slab, $375 per 150 (bulk)</p>
-                <button class="buy-btn">Buy</button>
-            </li>
-            <li class="product-item">
-                <h3 class="product-name">Walnut</h3>
-                <img src="images/v68_122.png" alt="Walnut slab" class="product-image">
-                <p class="product-price">$15 per slab, $375 per 150 (bulk)</p>
-                <button class="buy-btn">Buy</button>
-            </li>
-            <li class="product-item">
-                <h3 class="product-name">Iron</h3>
-                <img src="images/v68_119.png" alt="Iron slab" class="product-image">
-                <p class="product-price">$15 per slab, $375 per 150 (bulk)</p>
-                <button class="buy-btn">Buy</button>
-            </li>
-        </ul>
-    </main>
+  <main class="shop-content">
+    <h2 style="font-family:'Readex Pro',sans-serif; color:#748a6c; font-size:1.5rem;">Our Slab Products</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="images/v68_121.png" alt="Honey Slab" class="product-image" />
+        <div class="product-name">Honey</div>
+        <div class="product-price">$15 per slab, $375 per 150 (bulk)</div>
+        <a href="Thankyou.html" class="buy-btn">Buy</a>
+      </div>
+      <div class="product-card">
+        <img src="images/v68_122.png" alt="Walnut Slab" class="product-image" />
+        <div class="product-name">Walnut</div>
+        <div class="product-price">$15 per slab, $375 per 150 (bulk)</div>
+        <a href="Thankyou.html" class="buy-btn">Buy</a>
+      </div>
+      <div class="product-card">
+        <img src="images/v68_119.png" alt="Iron Slab" class="product-image" />
+        <div class="product-name">Iron</div>
+        <div class="product-price">$15 per slab, $375 per 150 (bulk)</div>
+        <a href="Thankyou.html" class="buy-btn">Buy</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <span>© Dannielle Geneus 2025</span>
+  </footer>
 </div>
 </body>
 </html>
