@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>N4SlAB – Sustainable Materials for a Better Built Environment</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Readex+Pro&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet" />
+
+</head>
+<style>* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', monospace, Arial, sans-serif;
+    background: #000000;
+    color: #fff;
+    margin: 0;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+.homepage-content {
+    flex: 1; /* Allow it to grow and take up remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.homepage-bg {
+    min-height: 100vh;
+    width: 100vw;
+    background: url("../images/v68_22.png") center center/cover no-repeat;
+    position: relative;
+}
+
+.main-header {
+    text-align: center;
+    padding: 3rem 1rem 1.5rem 1rem;
+    background: rgba(167,181,155,0.92);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    box-shadow: 0 2px 12px rgba(46,77,54,0.08);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+.nav-link {
+    color: #222;
+    text-decoration: none;
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.3em 1em;
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-link:hover {
+    background: #748a6c;
+    color: #fff;
+}
+
+.brand-title {
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 0.04em;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+.brand-tagline {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #748a6c;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.homepage-content {
+    flex: 1; /* Allow it to grow and take up remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.hero-image {
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(46,77,54,0.09);
+    background: #e5ece9;
+}
+.hero-description {
+    font-size: 1.1rem;
+    color: #d9e1e1;
+    margin-bottom: 0;
+}
+
+.features-section {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+.features-title {
+    font-family: 'Readex Pro', sans-serif;
+    color: #748a6c;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+.features-list {
+    list-style: disc inside;
+    padding: 0;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.07rem;
+    max-width: 500px;
+    text-align: left;
+}
+.features-list li {
+    margin-bottom: 0.7rem;
+}
+
+.mission-section {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.mission-title {
+    font-family: 'Readex Pro', sans-serif;
+    color: #748a6c;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+.mission-description {
+    color: #d9e1e1;
+    font-size: 1.07rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section {
+    background: rgba(167,181,155,0.15);
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 8px rgba(46,77,54,0.06);
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    margin: 2rem 0 2.5rem 0;
+    width: 100%;
+    max-width: 1050px;
+    text-align: center;
+    margin-top: auto; /* Push it to the bottom */
+}
+
+.contact-title {
+    font-family: 'Readex Pro', sans-serif;
+    color: #748a6c;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.contact-details {
+    flex: 1 1 180px;
+    text-align: left;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 1.2rem;
+}
+.contact-details a {
+    color: #a7b59b;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+.contact-details a:hover {
+    color: #748a6c;
+}
+
+.contact-form {
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.contact-form input,
+.contact-form textarea {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem;
+    padding: 0.7em;
+    border: 1px solid #748a6c;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+    outline: none;
+    transition: border 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #a7b59b;
+}
+.contact-form button {
+    background: #748a6c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 1rem;
+    padding: 0.7em 1.5em;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+}
+.contact-form button:hover {
+    background: #222;
+    color: #a7b59b;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+    color: #bbb;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+}
+
+@media (max-width: 700px) {
+    .main-header {
+        padding: 2rem 0.5rem 1rem 0.5rem;
+        border-radius: 0 0 1.2rem 1.2rem;
+    }
+    .brand-title {
+        font-size: 2rem;
+    }
+    .homepage-content {
+        padding: 1.2rem 0.2rem;
+    }
+    .hero-image {
+        max-width: 90vw;
+    }
+    .features-list, .mission-description {
+        font-size: 1rem;
+        max-width: 95vw;
+    }
+    .contact-info {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    .contact-section {
+        padding: 1.2rem 0.3rem 1.2rem 0.3rem;
+        max-width: 98vw;
+    }
+}</style>
+<body>
+<div class="homepage-bg">
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="Shop.html" class="nav-link">Shop</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="Research.html" class="nav-link">Research</a>
+            <a href="Contributors.html" class="nav-link">Contributors</a>
+        </nav>
+        <h1 class="brand-title">N4SlAB</h1>
+        <p class="brand-tagline">Where sustainably-made material meets a new eco-friendly built environment.</p>
+    </header>
+
+
+    <main class="homepage-content">
+        <section class="hero-section">
+            <img
+                    src="images/slab.jpg"
+                    alt="N4Slab Product Preview"
+                    class="hero-image"
+            >
+            <p class="hero-description">
+                Scroll to learn more about our craftsmanship and thorough processes…
+            </p>
+        </section>
+
+        <section class="features-section">
+            <h2 class="features-title">Why Choose N4SlAB?</h2>
+            <ul class="features-list">
+                <li>Maintains integrity for 20-40 years before requiring reapplication.</li>
+                <li>Compatible with DIY modifications like painting and shaving.</li>
+                <li>End-of-life recyclability allows slabs to be returned for refurbishment and reuse.</li>
+            </ul>
+        </section>
+
+        <section class="mission-section">
+            <h2 class="mission-title">Our Mission</h2>
+            <p class="mission-description">
+                By prioritizing sustainable practices, simple installation, and re-usability, our products contribute to carbon sequestration, reduce construction-related pollution, and offer economic benefits by minimizing mass production and material waste.
+            </p>
+        </section>
+    </main>
+
+    <!-- Contact section at the bottom, before footer -->
+    <section class="contact-section">
+        <h2 class="contact-title">Contact Us</h2>
+        <div class="contact-info">
+            <div class="contact-details">
+                <p><strong>Email:</strong> <a href="mailto:info@n4slab.com">info@n4slab.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                <p><strong>Address:</strong> 123 Eco Way, Green City, USA</p>
+            </div>
+            <form class="contact-form" action="mailto:info@n4slab.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <span>© Dannielle Geneus 2025</span>
+    </footer>
+</div>
+</body>
+</html>
